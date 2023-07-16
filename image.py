@@ -32,3 +32,19 @@ def apply_hdr(image_path, blur_size=99, scale=256.0):
     hdr_image = cv2.merge([hdr_r, hdr_g, hdr_b])
 
     return hdr_image
+
+def main():
+    hdr_image = apply_hdr('assets/in.png', blur_size=99, scale=215.0)
+    cv2.imwrite('assets/out.png', hdr_image)
+
+    # hdr_image = apply_hdr('assets/in.png', blur_size=49, scale=128.0)
+    # Save the HDR image
+    # cv2.imwrite('assets/out_49.png', hdr_image)
+
+    # hdr_image = apply_hdr('assets/in.png', blur_size=199, scale=512.0)
+    # Save the HDR image
+    # cv2.imwrite('assets/out_199.png', hdr_image)
+
+
+if __name__ == '__main__':
+    main()
